@@ -40,10 +40,10 @@ def signup():
             UID = login_session['user']['localId']
             db.child("Users").child(UID).set(user)
             print("LOOOOO")
-            return redirect(url_for('home'))
+            return redirect(url_for('index'))
         except:
             error = "Authentication failed"
-            print("error")
+
     return render_template("signup.html",error = "authentication failed")
 
 @app.route('/thanks')
@@ -53,10 +53,10 @@ def thanks():
 
 
 
-@app.route('/home')
-def home(): 
+@app.route('/index')
+def index(): 
 
-    return render_template("home.html")
+    return render_template("index.html")
 
 @app.route('/survey', methods=['GET', 'POST'])
 def survey():
