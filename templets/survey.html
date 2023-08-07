@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="statics/survey.css">
+    <style>
+
+
+        header {
+            background-color: cyan;
+            color: #fff;
+            padding: 10px;
+        }
+
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin-right: 20px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #fff;
+        }
+
+        nav ul li a button {
+            background-color: #555;
+            border: none;
+            color: #fff;
+            padding: 8px 12px;
+            cursor: pointer;
+        }
+
+        nav ul li a button:hover {
+            background-color: #777;
+        }
+
+        form {
+ 
+            text-align: center;
+            max-width: 600px;
+            margin: 30px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+/*fancy message*/
+
+
+
+@function textShadow($precision, $size, $color){
+  $value: null;
+  $offset: 0;
+  $length: $size * (1 / $precision) - 1;
+
+  @for $i from 0 through $length {
+    $offset: $offset + $precision;
+    $shadow: $offset + px $offset + px $color;
+    $value: append($value, $shadow, comma);
+  }
+
+  @return $value;
+}
+
+.playful span {
+  position: relative;
+  color: #5362F6;
+  text-shadow: textShadow(0.25, 6, #E485F8);
+  animation: scatter 1.75s infinite;
+}
+
+.playful span:nth-child(2n) {
+  color: #ED625C;
+  text-shadow: textShadow(0.25, 6, #F2A063);
+  animation-delay: 0.3s;
+}
+
+.playful span:nth-child(3n) {
+  color: #FFD913;
+  text-shadow: textShadow(0.25, 6, #6EC0A9);
+  animation-delay: 0.15s;
+}
+
+.playful span:nth-child(5n) {
+  color: #555BFF;
+  text-shadow: textShadow(0.25, 6, #E485F8);
+  animation-delay: 0.4s;
+}
+
+.playful span:nth-child(7n), .playful span:nth-child(11n) {
+  color: #FF9C55;
+  text-shadow: textShadow(0.25, 6, #FF5555);
+  animation-delay: 0.25s;
+}
+
+@keyframes scatter {
+  0% {
+    top: 0;
+  }
+  50% {
+    top: -10px;
+  }
+  100% {
+    top: 0;
+  }
+}
+
+
+
+h1 {
+  font-size: 60px;
+  text-transform: uppercase;
+  font-family: "Archivo Black", "Archivo", sans-serif;
+  font-weight: normal;
+  display: block;
+  width: 666px;
+  max-width: 80vw;
+  min-height: 90px;
+  height: auto;
+  text-align: center;
+  margin: 5rem auto;
+
+}
+
+
+/*made with ❤, by qpi65*/
+
+        .M {
+           text-align: center;
+           color: darkred;
+        }
+
+        h4 {
+            margin-top: 20px;
+        }
+
+        input[type="text"],
+        input[type="number"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        input[type="radio"] {
+            margin-right: 10px;
+        }
+
+        input[type="submit"] {
+            background-color: #555;
+            border: none;
+            color: #fff;
+            padding: 10px 15px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #777;
+        }
+
+
+
+    </style>
+    <meta charset="UTF-8">
+    <title>meaningful gift </title>
+</head>
+<body>
+    <header>  
+        <nav>  
+            <ul> 
+                <li>  
+                    <a href="/home"><button>home page</button></a>  
+                </li>    
+                <li>  
+                    <a href="/survey"><button>send a message</button></a> 
+                </li>  
+                <a href="/signout"><button>signout</button></a>
+                </li>   
+            </ul>  
+        </nav>  
+    </header> 
+
+
+
+<div class="firework"></div>
+<div class="firework"></div>
+<div class="firework"></div>
+
+
+<div class="firework"></div>
+<div class="firework"></div>
+<div class="firework"></div>
+
+
+
+<div class="firework"></div>
+<div class="firework"></div>
+<div class="firework"></div>
+
+
+
+<div class="firework"></div>
+<div class="firework"></div>
+<div class="firework"></div>
+
+
+
+<div class="firework"></div>
+<div class="firework"></div>
+<div class="firework"></div>
+
+
+
+
+    <form method="post" action="/survey">
+       
+<h1 class="playful" aria-label="Wash your hands">
+  <span aria-hidden="true">W</span><span aria-hidden="true">R</span><span aria-hidden="true">I</span><span aria-hidden="true">T</span><span aria-hidden="true">E</span><span aria-hidden="true"> </span><span aria-hidden="true">Y</span><span aria-hidden="true">o</span><span aria-hidden="true">U</span><span aria-hidden="true">R</span><span aria-hidden="true"> </span><span aria-hidden="true">W</span><span aria-hidden="true">I</span><span aria-hidden="true">S</span><span aria-hidden="true">H</span><span aria-hidden="true">!</span>
+</h1>
+        <div>
+            <input type="text"  name="Q1" id="Q1" required>
+        </div>
+       
+        <div>
+            <input type="submit" value="Submit"/>
+        </div>
+    </form>
+
+<div class="M">
+     <h2>attention! when you submit, you will hopfully get a reply from me via whatsapp during the day</h2>
+ </div>
+</body>
+</html>

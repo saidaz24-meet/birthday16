@@ -1,0 +1,405 @@
+/* statics/home.css */
+.bg-image {
+    background-image: url('bg.jpg');
+    background-size: cover;
+    background-position: center center;
+    width: 100%;
+    height: 100vh;
+    position: fixed; /* Keep the background fixed */
+    top: 0;
+    left: 0;
+    z-index: -1; /* Place it behind other elements */
+}
+
+.container {
+    /* Add padding to create space around the content */
+    padding: 50px;
+}
+
+.content {
+    /* Add some background to the content area for better readability */
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    border-radius: 10px;
+    
+    /* Position the content at the top left corner */
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Lato', sans-serif;
+  font-family: 'Oswald', sans-serif;
+}
+.wrapper{
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  /*background: linear-gradient(-135deg, #c850c0, #4158d0);*/
+  /* background: linear-gradient(375deg, #1cc7d0, #2ede98); */
+ /* background: linear-gradient(-45deg, #e3eefe 0%, #efddfb 100%);*/
+  /* clip-path: circle(25px at calc(0% + 45px) 45px); */
+  background: #000;
+  clip-path: circle(25px at calc(100% - 45px) 45px);
+  transition: all 0.3s ease-in-out;
+}
+#active:checked ~ .wrapper{
+  clip-path: circle(75%);
+}
+.menu-btn{
+  position: absolute;
+  z-index: 2;
+  right: 20px;
+  /* left: 20px; */
+  top: 20px;
+  height: 50px;
+  width: 50px;
+  text-align: center;
+  line-height: 50px;
+  border-radius: 50%;
+  font-size: 20px;
+  color: white;
+  cursor: pointer;
+  /*background: linear-gradient(-135deg, #c850c0, #4158d0);*/
+  /* background: linear-gradient(375deg, #1cc7d0, #2ede98); */
+ /* background: linear-gradient(-45deg, #e3eefe 0%, #efddfb 100%); */
+  background: whitesmoke;
+  transition: all 0.3s ease-in-out;
+}
+#active:checked ~ .menu-btn{
+  color: white;
+}
+#active:checked ~ .menu-btn i:before{
+  content: "hehe";
+  color: red;
+}
+.wrapper ul{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  list-style: none;
+  text-align: center;
+}
+.wrapper ul li{
+  margin: 15px 0;
+}
+.wrapper ul li a{
+  color: none;
+  text-decoration: none;
+  font-size: 30px;
+  font-weight: 500;
+  padding: 5px 30px;
+  color: #fff;
+  border-radius: 50px;
+  background: #000;
+  position: relative;
+  line-height: 50px;
+  transition: all 0.3s ease;
+}
+.wrapper ul li a:after{
+  position: absolute;
+  content: "";
+  background: #fff;
+   background: linear-gradient(#14ffe9, #ffeb3b, #ff00e0);
+  /*background: linear-gradient(375deg, #1cc7d0, #2ede98);*/
+  width: 104%;
+  height: 110%;
+  left: -2%;
+  top: -5%; /* if the font is 'Oswald'*/
+  border-radius: 50px;
+  transform: scaleY(0);
+  z-index: -1;
+  animation: rotate 1.5s linear infinite;
+  transition: transform 0.3s ease;
+}
+.wrapper ul li a:hover:after{
+  transform: scaleY(1);
+}
+.wrapper ul li a:hover{
+  color: #fff;
+}
+input[type="checkbox"]{
+  display: none;
+}
+.content{
+  position: absolute;
+  top: 35%;
+  left: 15%;
+  transform: translate(-50%, -50%);
+  z-index: -1;
+  text-align: center;
+  width: 50%;
+  color: #202020;
+}
+.content .title{
+  font-size: 40px;
+  font-weight: 700;
+}
+.content p{
+  font-size: 35px;
+  font-weight: 600;
+}
+
+@keyframes rotate {
+  0%{
+    filter: hue-rotate(0deg);
+  }
+  100%{
+    filter: hue-rotate(360deg);
+  }
+}
+
+
+.animate-charcter
+{
+   text-transform: uppercase;
+  background-image: linear-gradient(
+    -225deg,
+    #231557 0%,
+    #44107a 29%,
+    #ff1361 67%,
+    #fff800 100%
+  );
+  background-size: auto auto;
+  background-clip: border-box;
+  background-size: 200% auto;
+  color: #fff;
+  background-clip: text;
+  text-fill-color: transparent;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: textclip 2s linear infinite;
+  display: inline-block;
+      font-size: 190px;
+}
+
+@keyframes textclip {
+  to {
+    background-position: 200% center;
+  }
+}
+
+
+
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@900&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+
+  --bkg: #5eb3fd;
+  --white: #e7e6e6;
+
+  background-color: var(--white);
+  background-image: url("https://www.transparenttextures.com/patterns/concrete-wall.png");
+}
+
+.container {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+}
+
+.title {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.title h1 {
+  font-size: 25vmin;
+  font-weight: 900;
+  font-family: "Montserrat", sans-serif;
+  color: black;
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@900&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+
+  --bkg: #5eb3fd;
+  --white: #e7e6e6;
+
+  background-color: var(--white);
+  background-image: url("https://www.transparenttextures.com/patterns/concrete-wall.png");
+}
+
+.container {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+}
+
+.title {
+position: absolute;
+text-align: center;
+vertical-align: top;
+}
+
+
+.ghost {
+  width: 8vmin;
+  height: 12vmin;
+  background-color: var(--white);
+  background-image: url("https://www.transparenttextures.com/patterns/concrete-wall.png");
+  background-image: radial-gradient(ellipse at 35% 40%, #000 8%, transparent 0%),
+    radial-gradient(ellipse at 65% 40%, #000 8%, transparent 0%),
+    radial-gradient(ellipse at 50% 60%, #000 8%, transparent 0%);
+  border-radius: 100% / 70% 70% 0% 0%;
+  transform: translateX(100em) rotateZ(-90deg);
+  position: relative;
+  opacity: 0.9;
+  mix-blend-mode: exclusion;
+  animation: ghostMove 4s ease-out infinite;
+}
+@keyframes ghostMove {
+  0% {
+    transform: translateX(30em) rotateZ(-90deg);
+  }
+  100% {
+    transform: translateX(-35em) rotateZ(-90deg);
+  }
+}
+.ghost div {
+  position: absolute;
+  width: 20%;
+  background-color: var(--white);
+  background-image: url("https://www.transparenttextures.com/patterns/concrete-wall.png");
+}
+.ghost div:nth-of-type(1) {
+  height: 7vmin;
+  left: 0;
+  bottom: -6vmin;
+  border-radius: 100% / 0% 0% 50% 50%;
+}
+.ghost div:nth-of-type(2),
+.ghost div:nth-of-type(4) {
+  height: 4vmin;
+  left: 20%;
+  bottom: -3vmin;
+  border-radius: 100% / 50% 50% 0% 0%;
+  background-color: transparent;
+}
+.ghost div:nth-of-type(3) {
+  height: 4vmin;
+  left: 40%;
+  bottom: -3.95vmin;
+  border-radius: 100% / 0% 0% 60% 60%;
+  background-color: var(--white);
+}
+.ghost div:nth-of-type(4) {
+  left: 60%;
+}
+.ghost div:nth-of-type(5) {
+  height: 3vmin;
+  left: 80%;
+  bottom: -2.9vmin;
+  border-radius: 100% / 0% 0% 70% 70%;
+  background-color: var(--white);
+}
+
+
+body, h1, h2, h3, p, ul, li {
+    margin: 0;
+    padding: 0;
+}
+
+/* Apply a general font style */
+body {
+    font-family: Arial, sans-serif;
+}
+
+
+
+/* Style the secret menu bar */
+.container .title {
+            color: white;
+            text-align: center; /* Center the text */
+            position: absolute; /* Position the title absolutely within the container */
+            top: 0; /* Position at the top */
+            left: 50%; /* Center horizontally */
+            transform: translateX(-50%); /* Adjust for centering */
+            z-index: 1; /* Place above ghost */
+}
+
+
+/* Style the welcome section */
+.container .row {
+    text-align: center;
+    padding: 20px;
+}
+
+.animate-charcter {
+    font-size: 40px; 
+    text-align: left; /* Align the content to the left */
+    padding: 20px;
+    color: #333;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+/* Style the content sections */
+.content {
+    padding: 20px;
+    border: 1px solid #ccc;
+    margin: 20px auto;
+    max-width: 400px;
+}
+
+.heading h1 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.subheading p {
+    font-size: 16px;
+    line-height: 1.5;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.security-info h3 {
+    font-size: 18px;
+    color: #333;
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 768px) {
+    .wrapper ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .wrapper li {
+        margin: 5px 0;
+    }
+}
