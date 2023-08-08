@@ -18,12 +18,12 @@ firebase = pyrebase.initialize_app(Config)
 auth = firebase.auth()
 db = firebase.database()
 
-app = Flask(__name__, template_folder='templets', static_folder='statics')
+app = Flask(__name__, template_folder='docs', static_folder='statics')
 app.config['SECRET_KEY'] = 'super-secret-key'
 
 
 @app.route('/', methods=['GET', 'POST'])
-def signup():
+def index():
     error = ""
     if request.method == 'POST':
         email = request.form['email']
@@ -44,13 +44,12 @@ def signup():
         except:
             error = "Authentication failed"
 
-    return render_template("signup.html",error = "authentication failed")
+    return render_template("index.html",error = "authentication failed")
 
 @app.route('/thanks')
 def thanks(): 
 
     return render_template("thanks.html")
-
 
 
 @app.route('/home')
@@ -79,7 +78,7 @@ def survey():
 def signout():
     login_session['user'] = None
     auth.current_user = None
-    return redirect(url_for('signup'))
+    return redirect(url_for('index'))
 
 
 if __name__ == '__main__':
